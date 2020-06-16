@@ -66,6 +66,20 @@ using CentroMedico.Helpers;
 #line hidden
 #nullable disable
 #nullable restore
+#line 9 "C:\Users\Pablo\Desktop\Duoc\Ingenieria\Gestión agil de proyectos\ET\CentroMedico\CentroMedico\_Imports.razor"
+using CentroMedico.Forms;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "C:\Users\Pablo\Desktop\Duoc\Ingenieria\Gestión agil de proyectos\ET\CentroMedico\CentroMedico\_Imports.razor"
+using CentroMedico.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 4 "C:\Users\Pablo\Desktop\Duoc\Ingenieria\Gestión agil de proyectos\ET\CentroMedico\CentroMedico\Shared\MainLayout.razor"
 using Newtonsoft.Json;
 

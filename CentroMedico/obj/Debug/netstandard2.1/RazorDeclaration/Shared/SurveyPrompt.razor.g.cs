@@ -69,6 +69,27 @@ using CentroMedico.Helpers;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 9 "C:\Users\Pablo\Desktop\Duoc\Ingenieria\Gestión agil de proyectos\ET\CentroMedico\CentroMedico\_Imports.razor"
+using CentroMedico.Forms;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "C:\Users\Pablo\Desktop\Duoc\Ingenieria\Gestión agil de proyectos\ET\CentroMedico\CentroMedico\_Imports.razor"
+using CentroMedico.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\Pablo\Desktop\Duoc\Ingenieria\Gestión agil de proyectos\ET\CentroMedico\CentroMedico\_Imports.razor"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#nullable disable
     public partial class SurveyPrompt : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

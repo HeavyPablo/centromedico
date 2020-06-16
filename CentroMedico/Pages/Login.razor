@@ -2,9 +2,6 @@
 @inject HttpClient Http
 @inject NavigationManager Navigation
 @inject IJSRuntime js
-@using Forms
-@using Models
-@using Newtonsoft.Json
 @page "/login"
 
 <div class="row justify-content-center">
@@ -26,7 +23,11 @@
                         <label>Contraseña</label>
                         <input type="password" class="form-control" @bind="loginForm.contrasena">
                     </div>
-                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                    <div class="d-flex justify-content-between">
+                        <p class="text-secondary align-self-center m-0">¿Eres nuevo?  <a href="/registro">Regístrate</a></p>
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                    </div>
+                    
                 </EditForm>
             </div>
         </div>

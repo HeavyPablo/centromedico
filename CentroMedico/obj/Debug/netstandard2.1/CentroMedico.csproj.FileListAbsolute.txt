@@ -269,3 +269,5 @@ C:\Users\Pablo\Desktop\Duoc\Ingenieria\Gestión agil de proyectos\ET\CentroMedic
 C:\Users\Pablo\Desktop\Duoc\Ingenieria\Gestión agil de proyectos\ET\CentroMedico\CentroMedico\obj\Debug\netstandard2.1\Razor\_Imports.razor.g.cs
 C:\Users\Pablo\Desktop\Duoc\Ingenieria\Gestión agil de proyectos\ET\CentroMedico\CentroMedico\obj\Debug\netstandard2.1\compressed\_framework\_bin\Newtonsoft.Json.dll.gz
 C:\Users\Pablo\Desktop\Duoc\Ingenieria\Gestión agil de proyectos\ET\CentroMedico\CentroMedico\obj\Debug\netstandard2.1\compressed\_framework\_bin\Newtonsoft.Json.dll.gz.hash
+C:\Users\Pablo\Desktop\Duoc\Ingenieria\Gestión agil de proyectos\ET\CentroMedico\CentroMedico\obj\Debug\netstandard2.1\RazorDeclaration\Pages\RegistroUsuario.razor.g.cs
+C:\Users\Pablo\Desktop\Duoc\Ingenieria\Gestión agil de proyectos\ET\CentroMedico\CentroMedico\obj\Debug\netstandard2.1\Razor\Pages\RegistroUsuario.razor.g.cs
