@@ -1,0 +1,68 @@
+﻿@layout LoginLayout
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject IJSRuntime js
+@using Forms
+@using Models
+@using Newtonsoft.Json
+@page "/login"
+
+<div class="row justify-content-center">
+    <div class="col-sm-4 card shadow" style="background-color: #ffff">
+        <div class="card-body" style="padding: 15px">
+            <div>
+                <h1 class="h3 mb-3 font-weight-normal text-center">Administración del Centro Medico</h1>
+            </div>
+            <hr />
+            <div>
+                <EditForm Model="@loginForm" OnValidSubmit="encargadoLogin">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                    <div class="form-group">
+                        <label>Nombre de Usuario</label>
+                        <input type="text" class="form-control" @bind="loginForm.nombreUsuario">
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input type="password" class="form-control" @bind="loginForm.contrasena">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                </EditForm>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private LoginForm loginForm = new LoginForm();
+
+    private async Task encargadoLogin()
+    {
+        var requestMessage = new HttpRequestMessage()
+        {
+            Method = new HttpMethod("POST"),
+            RequestUri = new Uri("http://localhost:8080/login"),
+            Content = new StringContent(
+                        @"{""nombreUsuario"": """ + loginForm.nombreUsuario + @""", ""contrasena"": """ + loginForm.contrasena + @"""}"
+                    )
+        };
+
+        requestMessage.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+        requestMessage.Content.Headers.TryAddWithoutValidation("x-custom-header", "value");
+
+        var respuesta = await Http.SendAsync(requestMessage);
+
+        var respuestaContenido = await respuesta.Content.ReadAsStringAsync();
+        var usuario = JsonConvert.DeserializeObject<Usuario>(respuestaContenido);
+
+        if (usuario == null)
+        {
+            await js.MostrarMensaje("Error", "Compruebe bien sus credenciales.", IJSExtensions.TipoMensajeSweetAlert.error);
+            return;
+        }
+
+        await js.SetInLocalStorage("usuario", respuestaContenido);
+
+        Navigation.NavigateTo("/home");
+    }
+}

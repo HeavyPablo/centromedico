@@ -1,0 +1,57 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime js
+@inject NavigationManager navigation
+@using Newtonsoft.Json
+@using Models
+
+<div class="sidebar">
+    <NavMenu />
+</div>
+
+<div class="main">
+    <div class="top-row px-4">
+        <div class="ml-md-auto">
+            <div class="row">
+                <h5 class="px-2 m-0 border-right" style="vertical-align: text-bottom">@usuario.nombreUsuario <img src="images/user.svg" style="width: 40px" /></h5>
+                <div class="px-3">
+                    <button type="button" class="btn btn-dark" @onclick="encargadoLogout">
+                        <span class="oi oi-account-logout" aria-hidden="true"></span> Salir
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content px-4">
+        @Body
+    </div>
+</div>
+
+@code
+{
+    private Usuario usuario = new Usuario();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var usuarioFromLocalStorage = await js.GetFromLocalStorage("usuario");
+        if (usuarioFromLocalStorage == null)
+        {
+            navigation.NavigateTo("login");
+        } else
+        {
+            usuario = JsonConvert.DeserializeObject<Usuario>(usuarioFromLocalStorage);
+        }
+    }
+
+    public async Task encargadoLogout()
+    {
+        var respuesta = await js.Confirm("¿Estas seguro/a de salir?", "Al confirmar cerraras tu sesión.", IJSExtensions.TipoMensajeSweetAlert.question);
+        if (respuesta)
+        {
+            await js.RemoveItem("usuario");
+            navigation.NavigateTo("login");
+        }
+    }
+}
