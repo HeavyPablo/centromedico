@@ -1212,24 +1212,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pablo\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\judevia.ARIZTIA\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pablo\\Desktop\\Duoc\\Ingenieria\\Gestión agil de proyectos\\ET\\CentroMedico\\CentroMedico\\CentroMedico.csproj",
+      "projectUniqueName": "C:\\centromedico\\CentroMedico\\CentroMedico.csproj",
       "projectName": "CentroMedico",
-      "projectPath": "C:\\Users\\Pablo\\Desktop\\Duoc\\Ingenieria\\Gestión agil de proyectos\\ET\\CentroMedico\\CentroMedico\\CentroMedico.csproj",
-      "packagesPath": "C:\\Users\\Pablo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pablo\\Desktop\\Duoc\\Ingenieria\\Gestión agil de proyectos\\ET\\CentroMedico\\CentroMedico\\obj\\",
+      "projectPath": "C:\\centromedico\\CentroMedico\\CentroMedico.csproj",
+      "packagesPath": "C:\\Users\\judevia.ARIZTIA\\.nuget\\packages\\",
+      "outputPath": "C:\\centromedico\\CentroMedico\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\judevia.ARIZTIA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -1290,7 +1291,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
